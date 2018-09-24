@@ -3,16 +3,17 @@ const actions = require('../base/actions');
 /**
 *@description Page Object for Sign In Page
 */
-function SignInPage() {
+function HomePage() {
   //Web Elements to Click Sign In Button
-  this.signInButton = element(by.id('login'));
+  this.signInButton = element(by.xpath('//a[contains(text(), "Sign in")]'));
 
 /**
-*@description Funtions to Click on the Sign In Button
+*@description Function to Click on the Sign In Button
 */
-  this.signInClick () {
-    this.signInButton.click();
-
+  this.clickOnSignInButton = () => {
+    actions.getElementText(this.signInButton);
+    actions.clickToElement(this.signInButton);
+    browser.sleep(6000);
   };
 }
-module.export = new HomePage();
+module.exports = new HomePage();
