@@ -14,7 +14,7 @@ exports.config = {
         }
     },
     specs: [
-        '../tests/sampleTest.js'
+        '../test/Test.js'
     ],
 
     // Set the Url where browser will start.
@@ -41,4 +41,4 @@ exports.config = {
             })
         })
     }
-}
+};

@@ -31,5 +31,18 @@ function AuthenticationPage() {
   this.mobilePhoenButton = element(by.css('#phone_mobile'));
   this.addressAliadField = element(by.css('#alias'));
   this.resgisterButton = element(by.xpath('//span[contains(text(), "Register")]'));
+
+  /**
+  *@description Function Used for Validate a Empty field
+  *No Email Input
+  */
+  this.clickONCreateAnAccount() => {
+    actions.isElementDisplayed(this.createAnAccountButton);
+    actions.clickToElement(this.createAnAccountButton);
+    actions.getElementText(this.emailCreateAccountField);
+  };
+
+
+
 }
 module.export = new AuthenticationPage();
