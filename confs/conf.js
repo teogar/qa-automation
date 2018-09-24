@@ -1,3 +1,6 @@
+const env = require('node-env-file');
+env('.env');
+
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
 
@@ -14,10 +17,12 @@ exports.config = {
         '../tests/sampleTest.js'
     ],
 
+    // Set the Url where browser will start.
+    baseUrl: process.env.URL,
+
     framework: 'jasmine2',
     jasmineNodeOpts: {
         showColors: true,
-        isVerbose: true,
         realtimeFailure: true,
         includeStackTrace: true,
         defaultTimeoutInterval: 1200000
