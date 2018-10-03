@@ -22,4 +22,33 @@ describe('Click on Create an Account Button', function() {
       console.log('Invalid Email Alert is : Prensent');
     })
   })
+
+describe('Input A Valid Email', function() {
+  it('First step to Create an Account', function() {
+    console.log('Sending a Valid Email : Starting');
+    authenticationPage.sendValidEmail();
+    console.log('Valid Email : Sent')
+    })
+  })
+
+describe('Fullfill the Personal Info Form', function () {
+  it('Second step to Create an Account', function () {
+    console.log('Fullfill The presonal Info Form : Initializing');
+    authenticationPage.fillPersonalInfoBlock();
+    })
+  })
+
+  describe('Fullfill the Address Perosnal Info Form', function () {
+    it('Third Step to Create an Account', function (){
+      console.log('Fullfill the Address Info : Starting');
+      authenticationPage.fillTheAddressInfoBlock();
+    })
+  })
+
+  describe('Login', function () {
+    it('Final, Login to My Account', function () {
+      authenticationPage.loginFunction();
+      console.log('Finaly the Login');
+    })
+  })
 })
