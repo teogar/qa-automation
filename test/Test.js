@@ -3,6 +3,7 @@ const page = require('../page_objects/page');
 const homePage = require('../page_objects/HomePage');
 const authenticationPage = require('../page_objects/AuthenticationPage')
 
+//WizeLine Final Project
 
 beforeAll(function () {
     page.openUrl()
