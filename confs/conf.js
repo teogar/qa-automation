@@ -1,6 +1,8 @@
 const env = require('node-env-file');
 env('.env');
 
+
+
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
 
@@ -8,9 +10,7 @@ exports.config = {
         browserName: 'chrome',
         shardTestFiles: true,
         chromeOptions: {
-            prefs: {
-                'profile.managed_default_content_settings.notifications': 1
-            }
+          args: ["--headless"]  
         }
     },
     specs: [
