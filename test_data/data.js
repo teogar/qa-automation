@@ -4,7 +4,7 @@ const Data = function () {
 
 
  //Personal Info Properties
-  email = 'teogar666@mailinator.com';
+  email = 'teogar1234@mailinator.com';
   name = 'Tedoro';
   lastname = 'Garcia';
   password = 'T8999';
