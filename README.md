@@ -44,4 +44,4 @@ Now, you have selenium server running locally, so, to run the tests you have exe
 ```
 protractor confs/conf.js
 ```
-Hello
+
