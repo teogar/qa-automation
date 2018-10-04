@@ -1,5 +1,5 @@
 const actions = require('../base/actions');
-const data = require('../test_data/data')
+const data = require('../test_data/data');
 
 /**
 *@description Page Object for Authentication/Create a User
@@ -116,17 +116,24 @@ function AuthenticationPage() {
     console.log('Selecting State : Start');
     this.zipCodeField.clear();
     actions.enterText(this.zipCodeField, zipcode);
+    console.log('Sending Zip Code : Starting');
     this.additionalInfoField.clear();
     actions.enterText(this.additionalInfoField, addinfo);
+    console.log('Sending Additional Info : Starting');
     this.homePhoneField.clear();
     actions.enterText(this.homePhoneField, homephone);
+    console.log('Sending Home Phone Number : Starting');
     this.mobilePhoenButton.clear();
     actions.enterText(this.mobilePhoenButton, mobilephone);
+    console.log('Sending Mobile Phone Number : Starting');
     this.addressAliadField.clear();
     actions.enterText(this.addressAliadField, alias);
+    console.log('Sending Address Alias : Starting');
     actions.clickToElement(this.resgisterButton);
+    console.log('Clcik to Submit Button : Clicked');
     browser.sleep(2000);
     actions.clickToElement(this.signOutButton);
+    console.log('Clcik to Signout Button : Clicked and Signed Out');
     browser.sleep(5000);
   }
   /**
